@@ -5,7 +5,7 @@ if  [ ! $1 ]; then
 	echo Please provide an address to check
 	exit
 elif [ "$1" == "-h" ]; then
-	echo To run IPTest, perform the following command
+	echo To run IPTest, perform the following command:
 	echo iptest {IP adress to check}
 	exit
 fi

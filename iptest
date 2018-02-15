@@ -1,0 +1,15 @@
+#Script to check if a server is online
+#Written bt Jamie Cronin
+
+if  [ ! $1 ]; then
+	echo Please provide an address to check
+	exit
+fi
+
+IPToTest=$1
+pingResult="$(ping -c 1 $IPToTest)"
+if [[ $pingResult = *"error"* ]]; then
+    echo  $IPToTest could not be reached
+else
+    echo $IPToTest is online
+fi
